@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+message clan {
+
+    uint32 clanid = 1;
+    string clanname = 2;
+    uint32 guildlevel = 4;
+    uint32 livemember = 5;
+}
+message adminclan {
+    uint32 idadmin = 1;
+    string adminname = 3;
+    uint32 level = 6;
+    uint32 exp = 7;
+    uint32 brpoint = 15;
+    uint32 cspoint = 31;
+    uint32 lastlogin = 24;
+}
+message info {
+    string username = 3;
+    string region = 5;
+    uint32 level = 6;
+    uint32 Exp = 7;
+    uint32 banner = 11;
+    uint32 avatar = 12;
+    uint32 likes = 21;
+    uint32 BadgeCount = 18;
+    uint32 lastlogin = 24;
+    uint32 createat = 44;
+    uint32 brrankpoint = 35;
+    uint32 brrankscore = 15;
+    uint32 csrankpoint = 30;
+    uint32 csrankscore = 31;
+    string OB = 50;
+}
+message bio {
+    string bio = 9;
+}
+message pet {
+    string pet = 2;
+    uint32 petexp = 4;
+    uint32 petlevel = 3;
+}
+message Users {
+    repeated clan claninfo = 6;
+    repeated info basicinfo = 1;
+    repeated adminclan clanadmin = 7;
+    repeated bio bioinfo = 9;
+    
+}
+
